@@ -1,0 +1,13 @@
+name: teeeest
+region: us-east-1
+cloudProvider: genezio
+frontend:
+    path: client/dist
+    subdomain: papayawhip-nervous-bee
+scripts:
+    preBackendDeploy: npm install
+    preFrontendDeploy: npm install && npm run build
+workspace:
+    backend: server
+    frontend: client
+language: ts
